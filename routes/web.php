@@ -18,5 +18,5 @@ use App\Http\Controllers\WelcomeController;
 //     return view('welcome');
 // });
 
-Route::get('/', [\App\Http\Controllers\WelcomeController::class, 'index']);
+Route::get('/welcome', [WelcomeController::class, 'index']);
 Route::get('/welcome/second', [WelcomeController::class, 'second']);
