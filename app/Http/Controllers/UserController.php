@@ -22,10 +22,10 @@ class UserController extends Controller
             $r = User::create($datum);
             $request->session()->flash('user_register_success', true);
             return redirect('/');
-
-                } catch(\Throwable $e) {
-                    echo $e->getMessage();
-                    exit;
-                }       
+            } 
+        catch(\Throwable $e) {
+            echo $e->getMessage();
+            exit;
+            }       
     }
 }
