@@ -15,7 +15,7 @@ class UserController extends Controller
      */
     public function list()
     {
-        $group_by_column = ['users.id', 'users.name'];
+        
         $list = UserModel::select($group_by_column)
                          ->selectRaw('count(tasks.id) AS task_num')
                          ->leftJoin('tasks', 'users.id', '=', 'tasks.user_id')
