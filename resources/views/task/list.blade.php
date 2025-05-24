@@ -41,6 +41,10 @@
         <a href="/task/csv/download">CSVダウンロード</a><br>
         <a href="/completed_tasks/list">完了タスク一覧</a><br>
         <table border="1">
+        <tr>
+            <th>タスク名</th>
+            <th>期限</th>
+            <th>重要度</th>
         @foreach ($list as $task)
         <tr>
             <td>{{ $task->name }}
